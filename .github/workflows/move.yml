@@ -1,0 +1,32 @@
+name: Move Csv
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "tmp/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    if: github.repository == 'DreamGallery/WDS-Translation-Csv'
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Move files
+        run: |
+          mv -n tmp/*.csv TranslationCsv/
+
+      - name: Commit update
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Update Translation csv
+          repository: main

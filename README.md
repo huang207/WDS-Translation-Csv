@@ -2,7 +2,7 @@
 World Dai Star(世界大明星) 中文翻译zh-cn仓库
 
 ## 提交说明
-原始Csv文件存放在`EpisodeCsv`，找到你需要翻译的文件，将其复制到`tmp`文件夹，翻译完成后提交PR
+原始Csv文件存放在`EpisodeCsv`，找到你需要翻译的文件，将其复制到`tmp`文件夹，翻译完成后提交PR  
 提交通过的翻译文件会被移动到`TranslationCsv`文件夹中。  
 如果要修改翻译文件，请直接在`TranslationCsv`文件夹中修改
 
