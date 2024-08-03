@@ -1,0 +1,48 @@
+name: Update Episode
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update_episode:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        path: main
+    
+    - name: Setup Python environment
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+
+    - name: Get episode json
+      uses: actions/checkout@v4
+      with:
+        repository: wds-sirius/Adv-Resource
+        ref: main
+        sparse-checkout: |
+          episode
+        path: EpisodeJson
+    
+    - name: Move episode files
+      run: |
+        mkdir main/EpisodeJson
+        mv EpisodeJson/* main/EpisodeJson
+
+    - name: convert json to csv
+      run: |
+        python scripts/convert.py
+      working-directory:
+        main
+    
+    - name: Commit update
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: Update episode csv
+        repository: main
+        
