@@ -23,6 +23,7 @@ for _, _, files in os.walk(episode_json_path):
                         + ","
                         + "\n"
                     )
+                content = content + "title,请在此添加章节标题,," + "\n" + "info,翻译：XXX  校对：XXX,,"
             filename = file.split('.')[0]
             with open(f'{episode_csv_path}/{filename}.csv', "w", encoding="utf-8") as fp:
                 fp.write(content)
