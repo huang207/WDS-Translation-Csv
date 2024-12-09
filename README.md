@@ -39,6 +39,7 @@ npm run preview
 ### Demo
 
 [Online Demo](https://cpk0521.github.io/WDS_Adv_Player/)
+[Online Demo (fork)](https://wds-adv-player.207studio.top/)
 
 ## 感谢
 
