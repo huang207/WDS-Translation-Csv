@@ -32,9 +32,9 @@ npm run preview
 以下为Chrome的步骤，其他浏览器请自行查阅。  
 浏览器网址栏访问`chrome://settings/system`，开启`使用图形加速功能（如果可用）`。
 
-### 渲染器（仅分支版本 pixi-v8 branch）
+### 渲染器（仅 pixi-v8 branch）
 
-`PixiJS V8`播放器默认会在支持`WebGPU`的浏览器上使用`WebGPU`渲染器，在不支持的浏览器上会使用`WebGL`渲染器。通常来说`WebGPU`渲染器性能更好。倘若出现性能或兼容性问题，可以尝试通过指定`renderer`参数（`gl`或`gpu`）切换渲染器。
+`PixiJS V8`播放器默认会在支持`WebGPU`的浏览器上使用`WebGPU`渲染器，在不支持的浏览器上会使用`WebGL`渲染器。通常来说`WebGPU`渲染器性能更好。倘若出现性能或兼容性问题，可以尝试通过指定`renderer`参数（`webgl`或`webgpu`）切换渲染器。
 
 ### Demo
 
