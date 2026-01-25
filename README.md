@@ -1,6 +1,6 @@
 # WDS-Translation-Csv
 
-World Dai Star(世界大明星) 中文/zh-cn 翻译仓库
+World Dai Star(世界大明星) 中文(AI)/zhcnai 翻译仓库
 
 ## 提交说明
 
@@ -24,7 +24,7 @@ npm run preview
 部署完成后可以访问`http://127.0.0.1:4173`播放。  
 后带参数可以指定章节、自动播放以及翻译语言示例：  
 `http://127.0.0.1:4173/?id=1010110&at=true&tl=zhcn`  
-`id`即为剧情章节id，`tl`为翻译语言，简体中文就是`zhcn`，`at`为自动播放，请自行修改。
+`id`即为剧情章节id，`tl`为翻译语言，简体中文AI就是`zhcnai`，`at`为自动播放，请自行修改。
 
 ### 硬件加速
 
