@@ -1,4 +1,4 @@
-name: Update Episode
+name: Update Episode (Branch ai)
 
 on:
   workflow_dispatch:
